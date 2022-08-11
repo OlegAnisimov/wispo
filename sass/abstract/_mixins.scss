@@ -1,0 +1,35 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 375px:     Phone
+375 - 768px:   Big phone
+768 - 1024px:  Tablet
+1024 - 1366px: Big tablet
+1366 - 1920px: Desktop
+
+$breakpoint arguement choices:
+- phone
+- big-phone
+- tab
+- big-tab
+- desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 23.4em) { @content };    //375ppx
+  }
+  @if $breakpoint == big-phone {
+    @media only screen and (max-width: 48em) { @content };     //768px
+  }
+  @if $breakpoint == tab {
+    @media only screen and (max-width: 64em) { @content };    //1024px
+  }
+  @if $breakpoint == big-tab {
+    @media only screen and (min-width: 85.4em) { @content };    //1366
+  }@if $breakpoint == desktop {
+    @media only screen and (min-width: 120em) { @content };    //1920
+  }
+}
