@@ -1,0 +1,29 @@
+.centers {
+  height: 95.6rem;
+  width: 80%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: end;
+  margin-left: 20rem;
+
+  &__right-column {
+    height: 100%;
+  }
+
+  &__left-column {
+    height: 100%;
+  }
+
+  &__heading {
+    margin-bottom: 6rem;
+  }
+
+  &__text-box {
+    margin-bottom: 4rem;
+  }
+
+  &__info-text:first-child {
+    padding-bottom: 3.2rem;
+  }
+}

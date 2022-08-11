@@ -1,0 +1,25 @@
+.main-nav {
+  font-size: 1.6rem;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    border-right: 1px #E5E5E5 solid;
+    padding-right: 5.72rem;
+  }
+  &__item:not(:first-child) {
+    padding-left: 5.72rem;
+  }
+
+  &__link {
+    outline: none;
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  &__logo {
+    position: relative;
+    top: 1rem;
+  }
+}

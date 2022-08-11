@@ -1,0 +1,110 @@
+.gallery {
+  display: flex;
+  margin-bottom: 8rem;
+
+  &__item {
+    width: 35.6rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5.8rem;
+  }
+
+  &__arrow {
+    align-self: center;
+  }
+
+  &__arrow-left {
+    position: relative;
+    left: 7rem;
+  }
+
+  &__arrow-right {
+    position: relative;
+    right: 15rem;
+  }
+
+  &__employee {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 130%;
+    display: block;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  &__experience {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 120%;
+    white-space: pre-line;
+    margin-bottom: 3.2rem;
+    min-height: 6.6rem;
+    text-align: center;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    margin-bottom: 4rem;
+  }
+
+  &__orders {
+    margin-bottom: 1rem;
+  }
+
+  &__checkbox {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__orders-number {
+    position: relative;
+    top: -.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.92rem;
+  }
+
+  &__blockquote-box {
+    min-height: 5.9rem;
+  }
+
+  &__blockquote-box-1 {
+    background: url("../img/svg/blockquote-staff-1.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__blockquote-box-2 {
+    background: url("../img/svg/blockquote-staff-2.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__blockquote-box-3 {
+    background: url("../img/svg/blockquote-staff-3.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__blockquote-box-4 {
+    background: url("../img/svg/blockquote-staff-4.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__blockquote-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 120%;
+    white-space: pre-line;
+    padding-left: 2.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  &__slider-counter {
+    margin: 0 auto;
+    width: 7.2rem;
+    height: 2.6rem;
+    border: 1px red solid;
+  }
+}

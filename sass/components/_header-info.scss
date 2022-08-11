@@ -1,0 +1,31 @@
+.info {
+  width: 24.3rem;
+  height: 5.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+
+  &__first-row {
+    align-self: end; // cross ax position NOT main check
+  }
+
+  &__green-point {
+    height: .6rem;
+    width: .6rem;
+    margin-right: .5rem;
+  }
+
+  &__mode {
+    font-size: 1.4rem;
+  }
+
+  &__handset-logo {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__phone-number {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+}

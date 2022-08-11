@@ -1,0 +1,45 @@
+.options {
+  min-width: 81.6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: start;
+
+  &__option {
+    display: flex;
+    flex-flow: row;
+  }
+
+  &__option:first-child {
+    padding-bottom: 4rem;
+  }
+
+  &__box-logo {
+    width: 7rem;
+    height: 7rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1rem 3rem -.6rem rgba(35, 25, 4, .15);
+    border-radius: 1rem;
+  }
+
+  &__logo {
+    width: 5.18rem;
+    height: 5.25rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    align-self: center;
+    white-space: pre-line;
+    padding-left: 2rem;
+  }
+
+  &__text-guarantee {
+    padding-right: 8.5rem;
+  }
+}
+
+

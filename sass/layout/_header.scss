@@ -1,0 +1,35 @@
+.header {
+  background-color: var(--color-white);
+  height: 15.5rem;
+  border: 1px green solid;
+  //display: flex;
+  //justify-content: space-between; //
+
+  &__logo {
+    width: 31.5rem;
+    height: 5rem;
+    margin-left: 20rem;
+    margin-top: 2.4rem;
+  }
+
+  &__info-nav {
+    font-size: 1.4rem;
+    position: absolute;
+    left: 55rem;
+    top: 3.8rem;
+  }
+
+  &__main-nav {
+    position: absolute;
+    top: 10.5rem;
+    right: 20rem;
+    left: 20rem;
+  }
+
+  &__info {
+    position: absolute;
+    left: 147.7rem;
+    top: 2rem;
+    right: 20rem;
+  }
+}

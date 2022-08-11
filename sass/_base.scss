@@ -1,0 +1,49 @@
+/*
+COLORS
+--color-primary: #E5E5E5;
+--color-white: #FFFFFF;
+*/
+
+:root {
+  --color-primary: #E5E5E5;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey: #F6F6F6;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('/fonts/Calibri/calibri_bold.ttf') format('ttf');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  //@media only screen and (max-width: $bp-large) {
+  //  font-size: 50%;
+  //}
+}
+
+body {
+  font-family: 'Calibri';
+  font-weight: 500;
+  min-height: 100vh;
+}

@@ -1,0 +1,21 @@
+.info-nav {
+  font-size: 1.4rem;
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    color: var(--color-black);
+    outline: none;
+    text-decoration: none;
+    border-bottom: 1px solid #D1D1D1;
+  }
+
+  &__star-logo {
+    margin-left: 1.3rem;
+  }
+
+  &__item_last { // think about class name
+    margin-left: 2rem; // check
+  }
+}
