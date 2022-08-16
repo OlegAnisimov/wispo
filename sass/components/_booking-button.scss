@@ -1,26 +1,32 @@
-.booking-button {
+.booking-box {
+  display: flex;
   position: relative;
-  left: -1.5rem;
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: none;
+  max-width: max-content;
+  max-height: max-content;
+
+  &__background {
+    z-index: 1;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 5%;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+    cursor: pointer;
+  }
 
   &__text {
-    position: absolute;
-    color: var(--color-white);
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2.16rem;
-    top: 3.5rem;
-    right: 13rem;
-  }
-
-  &__arrow {
-    position: relative;
-    top: .3rem;
+    color: var(--color-white);
   }
 }
 

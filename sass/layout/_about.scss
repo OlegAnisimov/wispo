@@ -2,12 +2,13 @@
   display: flex;
   flex-flow: row;
   max-height: 83.5rem;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF; // check
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #a55656; // check
   border-bottom: 2px var(--color-grey) solid;
+  padding-left: 16.5rem;
 
   &__left-column {
-    margin-left: 20rem;
-    margin-right: 20rem;
+    display: flex;
+    flex-direction: column;
     padding-top: 12rem;
   }
 
