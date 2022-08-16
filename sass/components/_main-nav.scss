@@ -1,15 +1,17 @@
 .main-nav {
   font-size: 1.6rem;
+
   &__list {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
   }
   &__item {
     display: inline-block;
-    border-right: 1px #E5E5E5 solid;
-    padding-right: 5.72rem;
   }
-  &__item:not(:first-child) {
-    padding-left: 5.72rem;
+
+  &__item-border {
+    border-right: 1px #E5E5E5 solid;
   }
 
   &__link {

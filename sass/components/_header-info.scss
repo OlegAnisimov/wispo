@@ -6,7 +6,14 @@
   justify-content: end;
 
   &__first-row {
-    align-self: end; // cross ax position NOT main check
+    align-self: end;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__second-row {
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   &__green-point {
