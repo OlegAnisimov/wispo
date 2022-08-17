@@ -170,21 +170,21 @@
                 </div>
             </button>
 
-<!--            <div class="booking-box">-->
-<!--                <img class="img booking-box__background" src="img/png/booking.png"-->
-<!--                     alt="Записаться на агностику">-->
+            <!--            <div class="booking-box">-->
+            <!--                <img class="img booking-box__background" src="img/png/booking.png"-->
+            <!--                     alt="Записаться на агностику">-->
 
-<!--                <button class="booking-box__button">-->
-<!--                    <img-->
-<!--                            src="img/png/arrow-right.png"-->
-<!--                            alt="Записаться на диагностику"-->
-<!--                            srcset="img/svg/arrow-right.svg"-->
-<!--                            class="booking-button__arrow"-->
-<!--                    >-->
-<!--                    <span class="booking-box__text">-->
-<!--                        Записаться на диагностику</span>-->
-<!--                </button>-->
-<!--            </div>-->
+            <!--                <button class="booking-box__button">-->
+            <!--                    <img-->
+            <!--                            src="img/png/arrow-right.png"-->
+            <!--                            alt="Записаться на диагностику"-->
+            <!--                            srcset="img/svg/arrow-right.svg"-->
+            <!--                            class="booking-button__arrow"-->
+            <!--                    >-->
+            <!--                    <span class="booking-box__text">-->
+            <!--                        Записаться на диагностику</span>-->
+            <!--                </button>-->
+            <!--            </div>-->
 
             <div class="about__options options">
                 <div class="about__option options__option">
@@ -259,145 +259,144 @@
     <section class="staff">
         <h2 class="heading staff__title">Ремонт осуществляется
             первоклассными специалистами</h2>
+
         <span class="staff__info">Средний опыт работы наших мастеров 4 года</span>
 
-        <div class="gallery staff__gallery">
-            <!-- https://html5css.ru/howto/howto_js_slideshow_gallery.php            -->
-            <!-- https://www.30secondsofcode.org/css/s/horizontal-gallery          -->
-            <!--        styles for button COULD WITHOUT BUTTON JUST EVENT CLICK FOR IMG-->
-            <!--        <button class="gallery__button-arrow">            -->
-            <!--        </button>-->
 
+        <div class="staff__gallery-box gallery-box">
             <img
                     src="img/png/gallery-arrow-left.png"
+                    id="gallery__arrow-left"
                     alt="Прокрутка влево"
                     srcset="img/svg/gallery-arrow-left.svg"
                     class="gallery__arrow-left gallery__arrow">
 
+            <div class="gallery staff__gallery">
 
-            <figure class="gallery__item">
-                <img
-                        src="img/png/staff_1.png"
-                        alt="Сотрудник Илья"
-                        class="gallery__photo"
-                >
-                <figurecaption class="caption gallery__caption">
-                    <span class="caption__name gallery__employee">Илья</span>
-                    <p class="gallery__experience">Мастер по ремонту, опыт 5 лет.
-                        В «Белом Сервисе» с июля 2020</p>
-                    <div class="gallery__orders">
-                        <img
-                                src="img/png/gallery-checkbox.png"
-                                alt=""
-                                class="gallery__checkbox"
-                                srcset="img/svg/gallery-checkbox.svg"
-                        >
-                        <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
-                    </div>
-                    <div class="gallery__blockquote-box-1 gallery__blockquote-box">
-                        <blockquote class="gallery__blockquote-text gallery__blockquote-text-1">
-                            Определю любую причину
-                            поломки!
-                        </blockquote>
-                    </div>
-                </figurecaption>
-            </figure>
+                <figure class="gallery__item" id="gallery-item-1">
+                    <img
+                            src="img/png/staff_1.png"
+                            alt="Сотрудник Илья"
+                            class="gallery__photo"
+                    >
+                    <figurecaption class="caption gallery__caption">
+                        <span class="caption__name gallery__employee">Илья</span>
+                        <p class="gallery__experience">Мастер по ремонту, опыт 5 лет.
+                            В «Белом Сервисе» с июля 2020</p>
+                        <div class="gallery__orders">
+                            <img
+                                    src="img/png/gallery-checkbox.png"
+                                    alt=""
+                                    class="gallery__checkbox"
+                                    srcset="img/svg/gallery-checkbox.svg"
+                            >
+                            <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
+                        </div>
+                        <div class="gallery__blockquote-box-1 gallery__blockquote-box">
+                            <blockquote class="gallery__blockquote-text gallery__blockquote-text-1">
+                                Определю любую причину
+                                поломки!
+                            </blockquote>
+                        </div>
+                    </figurecaption>
+                </figure>
 
-            <figure class="gallery__item">
-                <img
-                        src="img/png/staff_2.png"
-                        alt="Сотрудник Александр"
-                        class="gallery__photo"
-                >
-                <figurecaption class="caption gallery__caption">
-                    <span class="caption__name gallery__employee">Александр</span>
-                    <p class="gallery__experience">Мастер по ремонту, опыт 4,5 года.
-                        В «Белом Сервисе» с августа 2020
-                    </p>
-                    <div class="gallery__orders">
-                        <img
-                                src="img/png/gallery-checkbox.png"
-                                alt=""
-                                class="gallery__checkbox"
-                                srcset="img/svg/gallery-checkbox.svg"
-                        >
-                        <span class="gallery__orders-number">Более 5 200 выполненных работ</span>
-                    </div>
-                    <div class="gallery__blockquote-box-2 gallery__blockquote-box">
-                        <blockquote class="gallery__blockquote-text gallery__blockquote-text-2">
-                            Верну к жизни, как самые
-                            первые модели, так и новинки
-                            смартфонов.
-                        </blockquote>
-                    </div>
-                </figurecaption>
-            </figure>
+                <figure class="gallery__item" id="gallery-item-2">
+                    <img
+                            src="img/png/staff_2.png"
+                            alt="Сотрудник Александр"
+                            class="gallery__photo"
+                    >
+                    <figurecaption class="caption gallery__caption">
+                        <span class="caption__name gallery__employee">Александр</span>
+                        <p class="gallery__experience">Мастер по ремонту, опыт 4,5 года.
+                            В «Белом Сервисе» с августа 2020
+                        </p>
+                        <div class="gallery__orders">
+                            <img
+                                    src="img/png/gallery-checkbox.png"
+                                    alt=""
+                                    class="gallery__checkbox"
+                                    srcset="img/svg/gallery-checkbox.svg"
+                            >
+                            <span class="gallery__orders-number">Более 5 200 выполненных работ</span>
+                        </div>
+                        <div class="gallery__blockquote-box-2 gallery__blockquote-box">
+                            <blockquote class="gallery__blockquote-text gallery__blockquote-text-2">
+                                Верну к жизни, как самые
+                                первые модели, так и новинки
+                                смартфонов.
+                            </blockquote>
+                        </div>
+                    </figurecaption>
+                </figure>
 
-            <figure class="gallery__item">
-                <img
-                        src="img/png/staff_3.png"
-                        alt="Сотрудник Андрей"
-                        class="gallery__photo"
-                >
-                <figurecaption class="caption gallery__caption">
-                    <span class="caption__name gallery__employee">Андрей</span>
-                    <p class="gallery__experience">Мастер по ремонту и переклейке
-                        дисплеев, опыт 5 лет. В «Белом
-                        Сервисе» с сентября 2020</p>
-                    <div class="gallery__orders">
-                        <img
-                                src="img/png/gallery-checkbox.png"
-                                alt=""
-                                class="gallery__checkbox"
-                                srcset="img/svg/gallery-checkbox.svg"
-                        >
-                        <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
-                    </div>
-                    <div class="gallery__blockquote-box-3 gallery__blockquote-box">
-                        <blockquote class="gallery__blockquote-text">
-                            Ремонт Apple – мой конек!
-                        </blockquote>
-                    </div>
-                </figurecaption>
-            </figure>
+                <figure class="gallery__item" id="gallery-item-3">
+                    <img
+                            src="img/png/staff_3.png"
+                            alt="Сотрудник Андрей"
+                            class="gallery__photo"
+                    >
+                    <figurecaption class="caption gallery__caption">
+                        <span class="caption__name gallery__employee">Андрей</span>
+                        <p class="gallery__experience">Мастер по ремонту и переклейке
+                            дисплеев, опыт 5 лет. В «Белом
+                            Сервисе» с сентября 2020</p>
+                        <div class="gallery__orders">
+                            <img
+                                    src="img/png/gallery-checkbox.png"
+                                    alt=""
+                                    class="gallery__checkbox"
+                                    srcset="img/svg/gallery-checkbox.svg"
+                            >
+                            <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
+                        </div>
+                        <div class="gallery__blockquote-box-3 gallery__blockquote-box">
+                            <blockquote class="gallery__blockquote-text">
+                                Ремонт Apple – мой конек!
+                            </blockquote>
+                        </div>
+                    </figurecaption>
+                </figure>
 
-            <figure class="gallery__item">
-                <img
-                        src="img/png/staff_4.png"
-                        alt="Сотрудник Дмитрий"
-                        class="gallery__photo"
-                >
-                <figurecaption class="caption gallery__caption">
-                    <span class="caption__name gallery__employee">Дмитрий</span>
-                    <p class="gallery__experience">Мастер по ремонту, опыт 9 лет.
-                        В «Белом Сервисе» с марта 2020</p>
-                    <div class="gallery__orders">
-                        <img
-                                src="img/png/gallery-checkbox.png"
-                                alt=""
-                                class="gallery__checkbox"
-                                srcset="img/svg/gallery-checkbox.svg"
-                        >
-                        <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
-                    </div>
-                    <div class="gallery__blockquote-box-4 gallery__blockquote-box">
-                        <blockquote class="gallery__blockquote-text">
-                            Мы даем гарантию
-                            и исполняем ее. На технику &ndash;
-                            это всегда год.
-                        </blockquote>
-                    </div>
-                </figurecaption>
-            </figure>
+                <figure class="gallery__item" id="gallery-item-4">
+                    <img
+                            src="img/png/staff_4.png"
+                            alt="Сотрудник Дмитрий"
+                            class="gallery__photo"
+                    >
+                    <figurecaption class="caption gallery__caption">
+                        <span class="caption__name gallery__employee">Дмитрий</span>
+                        <p class="gallery__experience">Мастер по ремонту, опыт 9 лет.
+                            В «Белом Сервисе» с марта 2020</p>
+                        <div class="gallery__orders">
+                            <img
+                                    src="img/png/gallery-checkbox.png"
+                                    alt=""
+                                    class="gallery__checkbox"
+                                    srcset="img/svg/gallery-checkbox.svg"
+                            >
+                            <span class="gallery__orders-number">Более 4 800 выполненных работ</span>
+                        </div>
+                        <div class="gallery__blockquote-box-4 gallery__blockquote-box">
+                            <blockquote class="gallery__blockquote-text">
+                                Мы даем гарантию
+                                и исполняем ее. На технику &ndash;
+                                это всегда год.
+                            </blockquote>
+                        </div>
+                    </figurecaption>
+                </figure>
+            </div>
 
             <img
                     src="img/png/gallery-arrow-right.png"
+                    id="gallery__arrow-right"
                     alt="Прокрутка вправо"
                     srcset="img/svg/gallery-arrow-right.svg"
                     class="gallery__arrow-right gallery__arrow">
-            <!--        <button class="gallery__button-arrow">-->
-            <!--        </button>-->
         </div>
+
 
         <div class="gallery__slider-counter">
             here will be slider
@@ -441,4 +440,5 @@
     </section>
 </div>
 </body>
+<script src="scripts/_gallery.js"></script>
 </html>
