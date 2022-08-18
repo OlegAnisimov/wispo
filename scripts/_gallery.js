@@ -1,27 +1,30 @@
 const rightArrow = document.getElementById('gallery__arrow-right');
 const leftArrow = document.getElementById('gallery__arrow-left');
+const galleryItems = document.querySelectorAll('.gallery__item');
+const dots = document.querySelectorAll('.gallery__dot');
+
 rightArrow.addEventListener('click', rightMoveGallery);
 leftArrow.addEventListener('click', leftMoveGallery);
 
 function rightMoveGallery() {
-    const galleryItems = document.getElementsByClassName('gallery__item');
-    for (let i = 0; i < galleryItems.length; i++) {
-        const currentOrder = Number(getComputedStyle(galleryItems[i]).order);
-        if (currentOrder < galleryItems.length - 1) {
-            galleryItems[i].style.order = (currentOrder + 1).toString();
+    galleryItems.forEach((item, index, array) => {
+        const orderStyle = Number(getComputedStyle(item).order);
+        if (orderStyle < array.length - 1) {
+            item.style.order = dots[index].style.order = (orderStyle + 1).toString();
         }
-        if (currentOrder === galleryItems.length - 1) {
-            galleryItems[i].style.order = '0';
+        if (orderStyle === array.length - 1) {
+            item.style.order = dots[index].style.order = '0';
         }
-    }
+    });
 }
 
 function leftMoveGallery() {
-    const galleryItems = document.getElementsByClassName('gallery__item');
-    for (let i = 0; i < galleryItems.length; i++) {
-        const currentOrder = Number(getComputedStyle(galleryItems[i]).order);
-        currentOrder === 0 ?
-            galleryItems[i].style.order = (galleryItems.length - 1).toString() :
-            galleryItems[i].style.order = (currentOrder - 1).toString();
-    }
+    galleryItems.forEach((item, index, array) => {
+        Number(getComputedStyle(item).order) === 0 ?
+            item.style.order = dots[index].style.order =
+                (array.length - 1).toString() :
+            item.style.order = dots[index].style.order =
+                (Number(getComputedStyle(item).order) - 1).toString();
+    })
 }
+
