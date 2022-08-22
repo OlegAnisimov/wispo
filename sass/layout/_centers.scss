@@ -1,18 +1,19 @@
 .centers {
-  height: 95.6rem;
+  height: 30%;
   width: 80%;
+  padding-left: 14rem;
+  padding-bottom: 12rem;
   display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  align-items: end;
-  margin-left: 20rem;
 
   &__right-column {
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__left-column {
     height: 100%;
+    padding-right: 3rem;
   }
 
   &__heading {
@@ -23,7 +24,11 @@
     margin-bottom: 4rem;
   }
 
-  &__info-text:first-child {
-    padding-bottom: 3.2rem;
+  &__item:first-child {
+    padding-bottom: 3rem;
+  }
+
+  &__img-3 {
+    padding-top: 10.3rem;
   }
 }
