@@ -15,7 +15,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 5.8rem;
+    margin-right: 3rem;
   }
 
   &__arrow {
@@ -25,12 +25,12 @@
 
   &__arrow-left {
     position: relative;
-    left: 7rem;
+    left: 12rem;
   }
 
   &__arrow-right {
     position: relative;
-    right: 15rem;
+    right: 13rem;
   }
 
   &__employee {
@@ -109,27 +109,34 @@
 
   &__dots {
     display: flex;
+    align-items: center;
     max-width: max-content;
+    height: 2.6rem;
     margin: 0 auto;
   }
 
   &__dot {
     cursor: pointer;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 0 .2rem;
+    height: .3rem;
+    width: .3rem;
+    margin: 0 4rem;
     background-color: #bbb;
     border-radius: 50%;
+    border: 1px black solid;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
 
   &__dot:hover {
-    background-color: red;
+    background-color: var(--color-white);
+    height: .7rem;
+    width: .7rem;
   }
 
   &__dot_active {
-    background-color: red;
+    background-color: var(--color-white);
+    height: .7rem;
+    width: .7rem;
   }
 }
 
