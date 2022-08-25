@@ -106,10 +106,12 @@ function left() {
 }
 
 function dotsMoving(event) {
+    Array.from(galleryItems).forEach((item) => item.removeAttribute('focus'));
     const dotOrder = Number(getComputedStyle(event.target).order);
     for (let i = 0; i < galleryItems.length - dotOrder; i++) {
         right()
     }
+    Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
 }
 
 /*
