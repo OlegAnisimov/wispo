@@ -19,13 +19,13 @@ window.onload = () => {
             galleryItems.forEach((item, index, array) => {
                 if (Number(getComputedStyle(item).order) === array.length - 1) {
                     item.style.order = (0).toString();
-                    item.setAttribute('focus', 'true')
+                    item.setAttribute('focus', 'true');
 
                 } else {
                     item.style.order = (Number(getComputedStyle(item).order) + 1).toString();
-                    item.setAttribute('focus', 'true')
+                    item.setAttribute('focus', 'true');
                 }
-            })
+            });
         } while (Number(getComputedStyle(galleryItems[focus]).order) !== 0);
 
         Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
@@ -34,7 +34,7 @@ window.onload = () => {
         });
         // localStorage.removeItem('focusGalleryItem');
     }
-}
+};
 
 function right() {
     Array.from(galleryItems).filter((item) => item.attributes.focus).forEach((item) => item.removeAttribute('focus'));
@@ -53,7 +53,7 @@ function right() {
                     item.classList.remove('gallery__dot_active');
                     setTimeout(() => {
                         item.classList.add('gallery__dot_active');
-                    }, 200)
+                    }, 200);
                 });
             }
         );
@@ -76,7 +76,7 @@ function left() {
             item.classList.remove('gallery__dot_active');
             setTimeout(() => {
                 item.classList.add('gallery__dot_active');
-            }, 200)
+            }, 200);
         });
     }
 
@@ -87,7 +87,7 @@ function dotsMoving(event) {
     Array.from(galleryItems).forEach((item) => item.removeAttribute('focus'));
     const dotOrder = Number(getComputedStyle(event.target).order);
     for (let i = 0; i < galleryItems.length - dotOrder; i++) {
-        right()
+        right();
     }
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
 }
