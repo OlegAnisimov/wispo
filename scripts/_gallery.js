@@ -106,8 +106,10 @@ function left() {
 }
 
 function dotsMoving(event) {
-
-
+    const dotOrder = Number(getComputedStyle(event.target).order);
+    for (let i = 0; i < galleryItems.length - dotOrder; i++) {
+        right()
+    }
 }
 
 /*
