@@ -15,36 +15,34 @@ dots.forEach((item) => item.addEventListener('click', dotsMoving));
 localStorage.setItem('focusGalleryItem', '1'); // TEST
 const focus = Number(localStorage.focusGalleryItem);
 
+/*
+* on right left move active dot only order === 0
+*
+* */
+
 window.onload = () => {
     if (localStorage.focusGalleryItem) {
         // SET GALLERY ITEMS
         // const focus = Number(localStorage.focusGalleryItem);
         if (focus === 0) return;
-        dots.forEach((item) => item.classList.remove('gallery__dot_active'));
 
         do {
             galleryItems.forEach((item, index, array) => {
                 if (Number(getComputedStyle(item).order) === array.length - 1) {
                     item.style.order = (0).toString();
-
-                    dots[index].style.order = (0).toString();
-                    if (dots[index].id.includes(focus)) {
-                        dots[index].classList.add('gallery__dot_active')
-                    }
+                    item.setAttribute('focus', 'true')
 
                 } else {
                     item.style.order = (Number(getComputedStyle(item).order) + 1).toString();
-
-                    dots[index].style.order = (Number(getComputedStyle(item).order)).toString();
-                    if (dots[index].id.includes(focus)) {
-                        dots[index].classList.add('gallery__dot_active')
-                    }
+                    item.setAttribute('focus', 'true')
                 }
             })
         } while (Number(getComputedStyle(galleryItems[focus]).order) !== 0);
-        galleryItems[focus].setAttribute('focus', 'true');
 
-
+        Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
+            item.classList.remove('gallery__dot_active');
+            item.classList.add('gallery__dot_active');
+        });
         // localStorage.removeItem('focusGalleryItem');
     }
 }
@@ -78,30 +76,29 @@ function leftMoveGallery() {
 }
 
 function right() {
-    Array.from(galleryItems).filter((item) => item.attributes.focus).forEach((item) => item.removeAttribute('focus'))
-    dots.forEach((item) => item.classList.remove('gallery__dot_active'));
+    Array.from(galleryItems).filter((item) => item.attributes.focus).forEach((item) => item.removeAttribute('focus'));
+
     if (document.documentElement.clientWidth > 1366) {
 
-        const sortingDotsOrder = (a, b) => Number(a.style.order) - Number(b.style.order);
-        const sortDotsOrder = (Array.from(dots)).sort(sortingDotsOrder);
-
-        // sortDotsOrder.forEach((item, index, array) => )
-
         galleryItems.forEach((item, index, array) => {
-                const orderStyle = Number(getComputedStyle(item).order);
-                if (orderStyle === array.length - 1) {
+                const orderStyleItem = Number(getComputedStyle(item).order);
+                if (orderStyleItem === array.length - 1) {
                     item.style.order = '0';
                 }
-                if (orderStyle < array.length - 1) {
-                    item.style.order = (orderStyle + 1).toString();
+                if (orderStyleItem < array.length - 1) {
+                    item.style.order = (orderStyleItem + 1).toString();
                 }
+                Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
+                    item.classList.remove('gallery__dot_active');
+                    setTimeout(() => {
+                        item.classList.add('gallery__dot_active');
+                    }, 200)
+                });
             }
         );
     }
 
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
-
-
 }
 
 function left() {
