@@ -49,12 +49,7 @@ function right() {
                 if (orderStyleItem < array.length - 1) {
                     item.style.order = (orderStyleItem + 1).toString();
                 }
-                Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
-                    item.classList.remove('gallery__dot_active');
-                    setTimeout(() => {
-                        item.classList.add('gallery__dot_active');
-                    }, 200);
-                });
+            dotsAnimate()
             }
         );
     }
@@ -72,12 +67,7 @@ function left() {
                 item.style.order = (Number(getComputedStyle(item).order) - 1).toString();
         });
 
-        Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
-            item.classList.remove('gallery__dot_active');
-            setTimeout(() => {
-                item.classList.add('gallery__dot_active');
-            }, 200);
-        });
+        dotsAnimate()
     }
 
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
@@ -90,4 +80,13 @@ function dotsMoving(event) {
         right();
     }
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
+}
+
+function dotsAnimate() {
+    Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
+        item.classList.remove('gallery__dot_active');
+        setTimeout(() => {
+            item.classList.add('gallery__dot_active');
+        }, 200);
+    });
 }
