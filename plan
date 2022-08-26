@@ -1,0 +1,3 @@
+1. implement flex(grow, shrink, base)
+2. implement dots moving in gallery maybe need implement let focusItemOrder = 0 it`s start value
+3 NB getComputedStyle use it not item.style.display for compare
