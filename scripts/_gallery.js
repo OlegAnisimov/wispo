@@ -9,7 +9,7 @@ leftArrow.addEventListener('click', left);
 dots.forEach((item) => item.addEventListener('click', dotsMoving));
 
 
-localStorage.setItem('focusGalleryItem', '1'); // TEST
+// localStorage.setItem('focusGalleryItem', '1'); // TEST
 const focus = Number(localStorage.focusGalleryItem);
 
 window.onload = () => {
@@ -27,6 +27,12 @@ window.onload = () => {
                 }
             });
         } while (Number(getComputedStyle(galleryItems[focus]).order) !== 0);
+
+        Array.from(galleryItems).filter((item, index, array) => Number(getComputedStyle(item).order) === array.length - 1).forEach((item) => {
+            item.style.display = 'none';
+            item.hidden = true;
+        });
+
 
         Array.from(dots).filter((item) => getComputedStyle(item).order === '0').forEach((item) => {
             item.classList.remove('gallery__dot_active');
@@ -72,6 +78,9 @@ function right() {
     }
 
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
+
+    localStorage.setItem('focusGalleryItem',
+        Array.from(galleryItems).find((item) => item.hasAttribute('focus')).getAttribute('id').slice(-1));
 }
 
 function left() {
@@ -83,7 +92,21 @@ function left() {
                 item.style.order = (array.length - 1).toString() :
                 item.style.order = (Number(getComputedStyle(item).order) - 1).toString();
         });
+        dotsAnimate();
+    }
 
+    if (document.documentElement.clientWidth <= 1366 &&
+        document.documentElement.clientWidth > 375) {
+        galleryItems.forEach((item, index, array) => {
+            if (Number(getComputedStyle(item).order) === 0) {
+                item.style.order = (array.length - 1).toString();
+            } else {
+                item.style.order = (Number(getComputedStyle(item).order) - 1).toString();
+            }
+            Number(getComputedStyle(item).order) !== array.length - 1 ?
+                item.style.display = 'flex' :
+                item.style.display = 'none';
+        });
         dotsAnimate();
     }
 

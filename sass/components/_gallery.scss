@@ -170,23 +170,14 @@
 
 #gallery-item-1 {
   order: 1;
-  @include respond(phone) {
-    display: none;
-  }
 }
 
 #gallery-item-2 {
   order: 2;
-  @include respond(phone) {
-    display: none;
-  }
 }
 
 #gallery-item-3 {
   order: 3;
-  @include respond(big-tab) {
-  display: none;
-  }
 }
 
 
