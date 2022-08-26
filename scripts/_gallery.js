@@ -49,7 +49,24 @@ function right() {
                 if (orderStyleItem < array.length - 1) {
                     item.style.order = (orderStyleItem + 1).toString();
                 }
-            dotsAnimate()
+                dotsAnimate();
+            }
+        );
+    }
+
+    if (document.documentElement.clientWidth <= 1366 &&
+        document.documentElement.clientWidth > 375) {
+        galleryItems.forEach((item, index, array) => {
+                const orderStyleItem = Number(getComputedStyle(item).order);
+                if (orderStyleItem === array.length - 1) {
+                    item.style.order = '0';
+                    item.style.display = 'flex';
+                }
+                if (orderStyleItem < array.length - 1) {
+                    item.style.order = (orderStyleItem + 1).toString();
+                    if (item.style.order === '3') item.style.display = 'none';
+                }
+                dotsAnimate();
             }
         );
     }
@@ -67,7 +84,7 @@ function left() {
                 item.style.order = (Number(getComputedStyle(item).order) - 1).toString();
         });
 
-        dotsAnimate()
+        dotsAnimate();
     }
 
     Array.from(galleryItems).filter((item) => Number(getComputedStyle(item).order) === 0).forEach((item) => item.setAttribute('focus', 'true'));
